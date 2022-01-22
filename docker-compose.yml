@@ -13,7 +13,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.dev
-      volumes:
-        - /app/node_modules
-        - .:/app
-      command: ["npm","run","tests"]
+    volumes:
+      - /app/node_modules
+      - .:/app
+    command: ["npm","run","test"]
